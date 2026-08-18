@@ -1,0 +1,217 @@
+/* AdminLayout.css - Purple Theme */
+
+.admin-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f7fa;
+}
+
+.admin-layout.dark {
+    background: #1a1a2e;
+}
+
+/* Top Bar - Purple Gradient */
+.admin-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0 2rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-layout.dark .admin-header {
+    background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+}
+
+.admin-header-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.admin-user {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.admin-logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.admin-logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Theme Toggle */
+.theme-toggle-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+/* Layout Body */
+.admin-layout-body {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar - Purple Gradient */
+.admin-sidebar {
+    width: 220px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem 0;
+    min-height: calc(100vh - 70px);
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.admin-layout.dark .admin-sidebar {
+    background: linear-gradient(180deg, #2d2d44 0%, #1a1a2e 100%);
+}
+
+.admin-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0 1rem;
+}
+
+.admin-nav-link {
+    padding: 0.8rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+}
+
+.admin-nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.admin-nav-link.active {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-weight: 600;
+}
+
+.admin-nav-link .nav-icon {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+.admin-main-content {
+    flex: 1;
+    padding: 2rem;
+    background: #f5f7fa;
+    min-height: calc(100vh - 70px);
+}
+
+.admin-layout.dark .admin-main-content {
+    background: #16213e;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .admin-sidebar {
+        width: 70px;
+    }
+    
+    .admin-nav-link {
+        padding: 0.8rem;
+        justify-content: center;
+        font-size: 0;
+    }
+    
+    .admin-nav-link .nav-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        display: none;
+    }
+    
+    .admin-header {
+        padding: 0 1rem;
+        height: 60px;
+    }
+    
+    .admin-logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .admin-header-right {
+        gap: 0.8rem;
+    }
+    
+    .admin-user {
+        font-size: 0.8rem;
+    }
+    
+    .admin-logout-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-logo h1 {
+        font-size: 0.9rem;
+    }
+    
+    .theme-toggle-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}

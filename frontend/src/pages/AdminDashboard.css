@@ -1,0 +1,245 @@
+/* AdminDashboard.css - Purple Theme */
+
+.admin-dashboard {
+    padding: 0;
+    background: #f5f7fa;
+    min-height: calc(100vh - 70px);
+}
+
+.admin-dashboard.dark {
+    background: #16213e;
+    color: #e0e0e0;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Overview Header */
+.overview-header {
+    margin-bottom: 2rem;
+}
+
+.overview-header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.admin-dashboard.dark .overview-header h1 {
+    color: #e0e0e0;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+    border-left: 4px solid #667eea;
+}
+
+.admin-dashboard.dark .stat-card {
+    background: #2d2d44;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left-color: #667eea;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    display: block;
+}
+
+.admin-dashboard.dark .stat-number {
+    color: #e0e0e0;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    display: block;
+    margin-top: 0.3rem;
+    font-weight: 500;
+}
+
+.admin-dashboard.dark .stat-label {
+    color: #b0b0b0;
+}
+
+/* Users Section */
+.users-section {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.admin-dashboard.dark .users-section {
+    background: #2d2d44;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.users-section h2 {
+    font-size: 1.3rem;
+    margin: 0 0 1.2rem 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.admin-dashboard.dark .users-section h2 {
+    color: #e0e0e0;
+}
+
+/* Table */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.admin-dashboard.dark .users-table thead {
+    background: linear-gradient(135deg, #3d3d5c 0%, #2d2d44 100%);
+}
+
+.users-table th {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.users-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #f0f2f5;
+    color: #2c3e50;
+}
+
+.admin-dashboard.dark .users-table td {
+    color: #e0e0e0;
+    border-bottom-color: #3d3d5c;
+}
+
+.users-table tbody tr {
+    transition: background 0.3s;
+}
+
+.users-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.admin-dashboard.dark .users-table tbody tr:hover {
+    background: #3d3d5c;
+}
+
+.users-table .no-data {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 2rem;
+}
+
+.admin-dashboard.dark .users-table .no-data {
+    color: #b0b0b0;
+}
+
+/* Loading */
+.admin-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    gap: 1rem;
+}
+
+.admin-loading.dark {
+    color: white;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e0e0e0;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-dashboard {
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .users-section {
+        padding: 1rem;
+    }
+    
+    .users-table {
+        font-size: 0.85rem;
+    }
+    
+    .users-table th,
+    .users-table td {
+        padding: 0.5rem 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .overview-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .users-table {
+        font-size: 0.75rem;
+    }
+    
+    .users-table th,
+    .users-table td {
+        padding: 0.3rem 0.4rem;
+    }
+}

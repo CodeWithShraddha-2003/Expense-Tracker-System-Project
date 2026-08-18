@@ -1,7 +1,9 @@
-**📌 Project Overview**
+**📌 Project Overview:-**
+
 Expense Tracker System is a full-stack web application designed to help users manage their personal finances efficiently. It provides an intuitive admin dashboard for tracking income, expenses, and financial categories with real-time statistics and reporting.
 
 **🛠️ Technologies Used:-**
+
 🎨 Frontend
  -HTML - Structure of web pages
  -CSS - Styling and responsive design
@@ -15,29 +17,27 @@ Expense Tracker System is a full-stack web application designed to help users ma
 
 **How to Run Expense Tracker System:-**
 
-Step 1: Database Setup  Using XAMPP/WAMP (Recommended for beginners)
-  --Install XAMPP from https://www.apachefriends.org/
-  --Start XAMPP Control Panel
-  --Start Apache and MySQL services
-  --Open phpMyAdmin (http://localhost/phpmyadmin)
-  --Create a new database named expense_db
-  --Import the database schema:
-  --Click on the expense_db database
-  --Click on the Import tab
-  --Choose the file: database/schema.sql
-  --Click Go
+Step 1: Database Setup (XAMPP)
+
+  Open XAMPP → Start Apache + MySQL → Open phpMyAdmin → Create database expense_db → Import schema.sql
 
 Step 2: Backend Setup
-  -cd backend-> npm install-> npm run dev
+
+  cd backend-> npm install-> npm run dev
 
 Step 3: Frontend Setup
-  --cd frontend-> npm install-> npm start
+
+  cd frontend-> npm install-> npm start
 
 Step 4: Login Credentials
-  --Admin Login:
+
+  Admin Login:
+  
       Email: admin@gmail.com
       Password: admin1@23
-  --User Login:
+      
+  User Login:
+  
      Email: john@gmail.com
      Password: John@123
      
